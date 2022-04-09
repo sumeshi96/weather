@@ -31,6 +31,18 @@ def output(soup):
         time = "{:02}-{:02}".format(time_from,time_to)
         every_six[time] = rain_probability[i].text.strip()
 
+    weather = []
+
+    weather.append(weather_telop)
+    weather.append(high_temp)
+    weather.append(low_temp)
+    weather.append(every_six['00-06'])
+    weather.append(every_six['06-12'])
+    weather.append(every_six['12-18'])
+    weather.append(every_six['18-24'])
+
+    print(weather)
+
     print(
         "天気："+ str(weather_telop) +"\n"
         "最高気温：" + str(high_temp) + "\n"
